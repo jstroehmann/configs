@@ -3,5 +3,13 @@ startup_message off
 nethack on
 hardstatus alwayslastline
 backtick 1 1200 1200 whoami
-hardstatus string "{%h - %m/%d %c} %=%-Lw%{= BW}%50>%n* %t%{-}%+Lw%<"
+# hardstatus string "{%h - %m/%d %c} %=%-Lw%{= BW}%50>%n* %t%{-}%+Lw%<"
 deflogin off
+
+
+defutf8 on
+utf8 on on
+term "screen-256color"
+
+caption always "%{kY} %n%f* %t %?%{YR}%{kR} %u %{Rb}%:%{Yb}%?%?%F%{.b}%:%{.w}%?%="
+hardstatus alwayslastline "%{bk} %S %{kb} $LOGNAME %{bk} %H %?%{kb}%{kY} %-Lw%{Yk}%:%{Yb}%{Yk}%?%{Yk} %n%f* %t %{kY}%+Lw %-="
