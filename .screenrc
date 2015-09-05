@@ -1,0 +1,7 @@
+autodetach on
+startup_message off
+nethack on
+hardstatus alwayslastline
+backtick 1 1200 1200 whoami
+hardstatus string ""
+deflogin off
