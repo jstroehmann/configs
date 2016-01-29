@@ -103,11 +103,18 @@ set ai "Auto indent
 set si "Smart indent
 " set wrap "Wrap lines
 
-" Always show the status line
+" Setup powerline instead of status line
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
 set laststatus=2
+set t_Co=256
+
+" Always show the status line
+" set laststatus=2
 
 " Format the status line
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
+" set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
 
 " Delete trailing white space on save, useful for Python and CoffeeScript ;)
 func! DeleteTrailingWS()
